@@ -6,48 +6,76 @@ body {
     padding: 40px;
 }
 
-h1 {
-    color: #1f3c88;
+header {
+    background: linear-gradient(135deg, #1f3c88, #4a90e2);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+header h1 {
     margin-bottom: 5px;
 }
 
-h3 {
-    color: #555;
+header h3 {
     margin-top: 0;
-}
-
-p {
-    max-width: 600px;
-    line-height: 1.6;
-    font-size: 16px;
-}
-header {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    margin-bottom: 30px;
+    font-weight: normal;
 }
 
 section {
     background: white;
     padding: 30px;
-    border-radius: 8px;
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 h2 {
     color: #1f3c88;
 }
 
-ul {
-    padding-left: 20px;
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
 
-li {
-    margin-bottom: 10px;
+.service-card {
+    background: #f9fafc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
 }
-section + section {
-    margin-top: 30px;
+
+.service-card:hover {
+    transform: translateY(-5px);
 }
+
+.service-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.service-card h4 {
+    color: #1f3c88;
+    margin: 15px 0 5px;
+}
+
+.service-card p {
+    padding: 0 15px 20px;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    color: #777;
+    margin-top: 40px;
+}
+
 @media (max-width: 600px) {
     body {
         padding: 20px;
